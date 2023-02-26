@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
+import { FeedbacksModule } from './feedbacks/feedbacks.module';
+import { SubscriptionsModule } from './subscriptions/subscriptions.module';
 
 @Module({
   imports: [
@@ -23,6 +25,8 @@ import { ConfigModule } from '@nestjs/config';
       },
     }),
     UsersModule,
+    FeedbacksModule,
+    SubscriptionsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
